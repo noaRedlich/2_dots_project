@@ -1,0 +1,68 @@
+table{
+    margin:auto;
+}
+.logo{
+    width: 200px;
+    display: block;
+   
+}
+.head{
+    text-align:center;
+            /* align-items: center;
+            display: flex; */
+            font-size: 20px;
+            font-weight:bold;
+            font-family: 'Rubik',sans-serif;
+            /* color:rgb(192, 150, 94); */
+}
+.background{
+    background: url('/assets/images/תמונה1.GIF');
+    width: 100%;
+    height: 250px;
+   /* height: -webkit-fill-available; */
+}  
+:host >>> .ui-steps::before{
+    border: 1px solid rgb(192, 150, 94) !important;
+
+}
+.btn{
+    margin: auto;
+            width: 300px;
+            height: 50px;
+            text-align:center;
+            /* align-items: center;
+            display: flex; */
+            font-size: 20px;
+            font-weight:bold;
+            font-family: 'Rubik',sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            color:rgb(192, 150, 94);
+            background-color: whitesmoke;  
+            border-radius: 50px;
+            border: solid rgb(192, 150, 94) 3px;
+        }
+   .btn:hover {
+    background-color: rgb(192, 150, 94);
+    color: white;
+  }
+  .btn1{
+    margin: auto;
+            width: 200px;
+            height: 50px;
+            text-align:center;
+            /* align-items: center;
+            display: flex; */
+            font-size: 20px;
+            font-weight:bold;
+            font-family: 'Rubik',sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            color:rgb(192, 150, 94);
+            background-color: whitesmoke;  
+            border-radius: 50px;
+            border: solid rgb(192, 150, 94) 3px;
+        }
+   .btn1:hover {
+    background-color: rgb(192, 150, 94);
+    color: white;
+  }
+

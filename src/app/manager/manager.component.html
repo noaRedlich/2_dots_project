@@ -1,0 +1,44 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+  <br>
+  <br>
+  <br>
+  <div><img src="./assets/images/logo4.GIF" class="logo">
+  <br>
+  <br>
+  </div>
+
+  <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+
+<div *ngIf="display==true">
+  <br>
+  <button class="btn" (click)="newContact()">הוסף איש קשר חדש</button>
+  <table dir="rtl" mdbTable border="1" class="tabl">
+    <thead class="blue-gradient" class="info">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col" class="head">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let lod of ListOrderDetails" class="info">
+        <td scope="row" class="head">{{lod.userName}}</td>
+        <td>
+          <input checked (click)="orderDetails(lod)" type="button" class="btn" value="פרטי הזמנה" /></td>
+         
+          <td>
+            <button class="btn1" (click)="finish(lod)"> <i class="fa fa-times" aria-hidden="true" style="font-size: 0.9em"></i> סיים הזמנה</button>
+            
+           </td>
+           <!-- <td>
+            <button class="btn1" (click)="showOrderDetails(lod)"> <i class="fa fa-times" aria-hidden="true" style="font-size: 0.9em"></i> לצפיה בהזמנה</button>
+            
+           </td> -->
+           
+           <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="font-size: 1.5em"></i>
+              <span class="sr-only">Loading...</span> -->
+           
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+<div class="background">
+    <br><br><br>
+    <div class="aa">
+        <img src="/assets/images/logo4.GIF" class="logo">
+    </div>
+    <div class="detailsDiv">
+        <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="div1"> 
+                <br><br>    
+
+            <div class="title">
+                טען את קובץ הכתובות לפי התבנית המצרופת
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- <input #file pInputText  type="file" accept="file/excel" class="custom-file-input " (change)="changeName($event)" /> -->
+            <input #file type="file" [readonly]="!adminPermission" accept="file/excel" pInputText  (change)="changeName($event)"/> 
+            <br><br>    
+            <a href="./assets/images/address.png" target="_blank" >דוגמא לתבנית קובץ כתובות</a>
+            <br><br>    
+            <br>
+            <button class="btn" (click)="getUserContacts()">הצג את אנשי הקשר שלי</button>
+         
+        </div>
+        <!-- <p-button label="לתשלום" (onClick)="pay()"></p-button> -->
+    </div>
+</div>

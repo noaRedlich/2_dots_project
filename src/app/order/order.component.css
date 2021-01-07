@@ -1,0 +1,191 @@
+.order{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc;
+}
+ul{
+    padding: 0; margin: 0; list-style-type: none;
+}
+ul li{
+    width: 100px;
+    height: 100px;
+   text-align: center;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    float: right;
+    position: relative;
+    transition: 0.3s;
+}
+ul li:hover {
+    transform: scale(1.1);
+}
+ul li:after {
+    content: "בחר";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+   opacity: 0;
+    transition: 0.5s;
+}
+ul li:hover:after {
+  opacity: 1;
+}
+.ordersDiv{
+    width: 820px;
+    margin: 0 auto;
+    /* display: inline-block; */
+    height: 450px;
+    position: relative;
+    right: 40px;
+    box-shadow: 0 0 10px 5px rgb(192, 150, 94);
+
+    border-radius: 20px;
+    
+ }
+ .title{
+    /* border-bottom: 3px rgb(192, 150, 94) solid;  */
+
+     font-family: 'Rubik',sans-serif;
+     font-size: 25px;
+     text-align: center;
+     margin:0 auto;
+     width: 250px;
+
+ }
+ .detailsDiv{
+    box-shadow: 0 0 10px 5px rgb(192, 150, 94);
+    border-radius: 20px;
+
+     /* display: inline-block; */
+    margin: 0 auto;
+     width: 820px;
+     height:450px;
+     position: relative;
+     left: 40px;
+     /* left: 5px; */
+ }
+ textarea {
+    width: 650px;
+    height: 230px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    /* resize: none; */
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+   
+   }
+.borderChoose{
+    border: 16px double #C0965E;
+}
+.page-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1.5fr 2.8fr 0.5fr ;
+    grid-template-areas: "header header"
+                            "aside nav"
+                            "footer footer"
+}
+header {
+    /* background-color: red; */
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+nav {
+    /* border-left: 3px rgb(192, 150, 94) solid;  */
+
+    /* background-color: yellow; */
+    grid-area: nav;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+aside {
+    /* background-color: violet; */
+    grid-area: aside;
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5; */
+}
+section {
+    background-color: blue;
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+}
+footer {
+    /* background-color: rgb(166, 71, 255); */
+    grid-area: footer;
+    direction: ltr;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+.logo{
+    width: 200px;
+    display: block;
+    /* position: */
+    position: relative;
+  left: 50px;
+}
+.background{
+    background: url('/assets/images/תמונה1.GIF');
+    width: 100%;
+    height: 250px;
+   /* border-bottom: 3px rgb(192, 150, 94) solid;  */
+
+}  
+/* .btn{
+        width: 200px;
+        height: 40px;
+        text-align:center;
+        font-family: 'Rubik',sans-serif;
+        font-size: 25px;
+        background-color:rgb(192, 150, 94);
+        color: whitesmoke;  
+        border-radius: 50px;
+        border-style: ridge;
+} */
+.btn{
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    text-align:center;
+    /* align-items: center;
+    display: flex; */
+    font-size: 20px;
+    font-weight:bold;
+    font-family: 'Rubik',sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color:rgb(192, 150, 94);
+    background-color: whitesmoke;  
+    border-radius: 50px;
+    border: solid rgb(192, 150, 94) 3px;
+}
+   .btn:hover {
+    background-color: rgb(192, 150, 94);
+    color: white;
+  }
+.divBtn{
+    /* margin:0 auto; */
+    display: block;
+width: 100px;
+position: relative;
+left: 850px;
+}
+ul{
+    width: 74%;
+    margin: auto;
+}

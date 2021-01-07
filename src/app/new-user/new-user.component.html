@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+        <br><br>
+        <div><img src="./assets/images/logo4.GIF" class="logo">
+        </div>
+        <div>
+                <br>
+                <div *ngIf="display==2" >
+                        
+                        <p-steps [model]="items1" [(activeIndex)]="activeIndex1"></p-steps>
+                </div>
+                <div *ngIf="display==1">
+
+                        <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+                </div>
+                <br> <br> <br>
+                <div class="details">
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם פרטי" pInputText [(ngModel)]="userFirstName">                                <i
+                                class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם פרטי" pInputText [(ngModel)]="userFirstName">                                <i
+                                class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם משפחה" pInputText [(ngModel)]="userLastName">                                <i
+                                        class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="טלפון" pInputText [(ngModel)]="userTelephone">                                <i
+                                        class="fa fa-fw fa-phone " style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="מייל" pInputText [(ngModel)]="userMail"> <i class="fa fa-fw fa-envelope "
+                                        style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="password" size="30" placeholder="סיסמא" pInputText [(ngModel)]="userPassword">                                <i
+                                        class="fa fa-fw fa-star " style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <br>
+                        <div *ngIf="display==2">
+                                <button class="btn" (click)="save()">שמור</button>
+
+
+                        </div>
+                        <div *ngIf="display==1">
+                                <button class="btn" (click)="login()">הרשמה</button>
+
+
+                        </div>
+                </div>
+
+        </div>
+</div>
+<router-outlet></router-outlet>

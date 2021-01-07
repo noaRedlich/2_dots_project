@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="page-layout">
+    <header>
+        <div class="background">
+            <br>
+            <br>
+            <br>
+            <div><img src="./assets/images/logo4.GIF" class="logo">
+            </div>
+            <div>
+                <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+            </div>
+        </div>
+
+    </header>
+    <nav>
+        <br>
+        <br>
+        <div class="ordersDiv">
+            <br>
+            <br>
+            <br>
+            <div class="title">
+                בחר את ההזמנה הרצויה
+            </div>
+            <br>
+            <br>
+            <div>
+                <ul>
+                    <li [ngClass]="{'borderChoose':numImg==11}" (click)="saveOrder('11')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==22}" (click)="saveOrder('22')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==33}" (click)="saveOrder('33')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==44}" (click)="saveOrder('44')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==55}" (click)="saveOrder('55')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==66}" (click)="saveOrder('66')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==77}" (click)="saveOrder('77')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                    <li [ngClass]="{'borderChoose':numImg==88}" (click)="saveOrder('88')"><img src="./assets/images/order.gif"
+                            class="order"></li>
+                </ul>
+            </div>
+            <!-- <input #file type="file" [readonly]="!adminPermission" accept="file/excel" pInputText placeholder="cjr " (change)="changeName($event)" -->
+            <!-- /> -->
+        </div>
+
+    </nav>
+    <aside>
+        <br>
+        <br>
+        <div class="detailsDiv" [formGroup]="myOrderForm">
+            <br>
+            <br>
+            <br>
+            <div class="title">
+                הזן פרטי הזמנה
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;justify-content: center; ">
+                    <textarea formControlName="detailsOrder" placeholder="...הכנס טקסט" [(ngModel)]="details" cols="50" rows="20" WRAP [ngClass]="{'red':myOrderForm.controls.detailsOrder.invalid && myOrderForm.controls.detailsOrder.dirty}"></textarea>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <div class="divBtn">
+            <button class="btn" (click)="saveAndContinue()">שמירה והמשך</button>
+        </div>
+    </footer>
+</div>

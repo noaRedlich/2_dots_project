@@ -1,0 +1,84 @@
+ul{
+    list-style-type: none
+}
+/* div{ */
+    /* width:350px; 
+    height: 30px;
+    /* border-bottom-color: goldenrod; */
+    /* margin: auto;
+    border-bottom: 3px rgb(192, 150, 94) solid;  */
+
+
+/* } */
+.background{
+    height: 350px;
+    background: url('/assets/images/תמונה1.GIF');
+    width: 100%;
+    /* height: -webkit-fill-available; */
+    /* border-bottom-color: rgb(192, 150, 94); */
+    /* border-bottom-color: goldenrod;*/
+     border-bottom: 3px rgb(192, 150, 94) solid; 
+
+    }  
+    img{
+        margin: auto;
+
+    }
+.hr1{
+color: brown;
+}
+.p{
+    width: 100px;
+
+}
+.element{
+    box-shadow: 0 0 10px 5px rgb(192, 150, 94);
+    border-radius: 20px;
+    height: 300px;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center;  */
+    /* position: absolute; */
+    /* z-index: 15; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin: -100px 0 0 -150px; */
+}
+.div1{
+    border: 7px rgb(192, 150, 94) solid;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgb(192, 150, 94);
+    height: 350px;
+    width: 450px;
+    margin: auto;
+    
+}
+.btn{
+    margin: auto;
+            width: 300px;
+            height: 50px;
+            text-align:center;
+            /* align-items: center;
+            display: flex; */
+            font-size: 20px;
+            font-weight:bold;
+            font-family: 'Rubik',sans-serif;
+            color:rgb(192, 150, 94);
+            background-color: whitesmoke; /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            border: solid rgb(192, 150, 94) 3px;
+            border-radius: 50px;
+            /* border-style: ridge; */
+   }
+
+   .btn:hover {
+    background-color: rgb(192, 150, 94);
+    color: white;  
+  }
+.aa{
+    margin: auto;
+    text-align:center;
+
+}

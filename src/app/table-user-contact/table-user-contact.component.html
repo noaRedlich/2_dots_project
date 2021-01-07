@@ -1,0 +1,42 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+        <br><br>
+        <div><img src="./assets/images/logo4.GIF" class="logo"></div>
+           <br><br><br>
+        <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+        <div>
+          <div></div>
+          <br>
+          <br>
+         
+<table mdbTable border="1" class="tabl">
+
+  <thead class="blue-gradient" class="info">
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let uc of userContacts;let i=index" class="info">
+      <td><input value="uc.user_contactId" (click)="checkboxChangging(uc)" [(ngModel)]="statusState[i]" type="checkbox" inputId="uc.userContactId" title="{{statusState[i]? 'הסר מרשימת המוזמנים' : 'הוסף לרשימת המוזמנים'}}"></td>
+      <td scope="row">{{uc.contactFirstTitle}}</td>
+      <td>{{uc.contactFirstName}}</td>
+      <td>{{uc.contactLastName}}</td>
+      <td>{{uc.contactSpouse}}</td>
+      <td>{{uc.contactLastTitle}}</td>
+      <td>{{uc.contactAddress}}</td>
+      <td>{{uc.contactCity}}</td>
+      <td>{{uc.contactTelephon}}</td>
+      <td>{{uc.contactDetails}}</td>
+      <td>{{uc.contactMail}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div><p-progressSpinner *ngIf="dataReturn" class="loading"></p-progressSpinner>
+
+<div>
+  <button class="btn" (click)="saveAndContinue()" >שמירה וסיום</button>
+  <button class="btn" (click)="back()" >חזור</button>
+</div>
+</div>

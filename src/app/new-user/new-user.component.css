@@ -1,0 +1,80 @@
+ 
+   input{
+       width:200px;
+   }
+   .step{
+       background-color: white;
+       /* background-color: black; */
+ }
+ .logo{
+    width: 200px;
+    display: block;
+   
+}
+.a{
+background-color:black;
+}
+
+
+.background{
+    background: url('/assets/images/תמונה1.GIF');
+    width: 100%;
+    height: 250px;
+   /* height: -webkit-fill-available; */
+}  
+.details{
+    box-shadow: 0 0 10px 5px rgb(192, 150, 94);
+    border-radius: 20px;
+    height: 420px;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+}
+:host >>> .ui-steps::before{
+    border: 1px solid rgb(192, 150, 94) !important;
+
+}
+
+:host >>> .ui-inputtext {
+    background: #ffffff;
+    padding: 0.5em 0.75em;
+    border: 0px solid white;
+    border-bottom: 2px solid rgb(192, 150, 94);
+    -moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    font-size: 1em;
+    color: #55595c;
+    line-height: 1.25;
+
+  
+}
+:host >>> .ui-inputtext.ui-state-focus,
+:host >>> .ui-inputtext:focus  {
+    border: 0px solid rgb(192, 150, 94) !important;
+    border-bottom: 2px solid rgb(192, 150, 94) !important;
+}
+.btn{
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    text-align:center;
+    /* align-items: center;
+    display: flex; */
+    font-size: 20px;
+    font-weight:bold;
+    font-family: 'Rubik',sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color:rgb(192, 150, 94);
+    background-color: whitesmoke;  
+    border-radius: 50px;
+    border: solid rgb(192, 150, 94) 3px;
+}
+   .btn:hover {
+    background-color: rgb(192, 150, 94);
+    color: white;
+  }
+  /* .bbb{
+    border-bottom: 2px solid rgb(192, 150, 94);
+
+  } */

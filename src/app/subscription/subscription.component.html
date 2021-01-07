@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+    <br> <br><br>
+    <div><img src="./assets/images/logo4.GIF" class="logo">
+    </div>
+    <div>
+        <div>
+            <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+            <br>
+            <br>
+            <br>
+            <div class="div1">
+               
+               
+                    <p class="aaa">!שלום</p>
+                    <br>
+                    <p class="aaa">.אנא הכנס/י את הפרטים הנדרשים</p>
+                    <br>
+                    <div>
+                        <input type="text" size="30"  placeholder="מייל" pInputText [(ngModel)]="userMail">
+                        <i class="fa fa-fw fa-user"style="font-size: 1.5em"></i>
+
+                    </div>
+                    <span style="color: red;size: 30px;text-align: right;font-weight: bold;">{{errorMail}}</span>
+                    <br>
+                    <div>
+                        <input type="password" size="30" placeholder="סיסמא" pInputText [(ngModel)]="userPassword"><i class="fa fa-fw fa-envelope"
+                            style="font-size: 1.5em"></i>
+                    </div>
+                    <span style="color: red;size: 30px;text-align: right;font-weight: bold;">{{errorPassword}}</span>
+
+                    <br>
+                    <br>
+                    <div>
+                        <button  class="btn" (click)="login()" 
+                         >
+                    כניסה</button>  
+                    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+                        <p style="color: white">Please Wait. </p>  
+                        </ngx-spinner>
+ <!-- dd <mat-spinner value="100" mode="determinate" color="warn"></mat-spinner> -->
+                    </div>
+                    <!-- <div class="center">
+                        <mat-progress-spinner diameter=50 
+                                              mode="indeterminate"
+                                              color="accent">
+                        </mat-progress-spinner> 
+                    </div> -->
+
+                    <!-- <Spinner animation="border" variant="light" size="sm" /> -->
+                    <!-- <Spinner animation="border" role="status">
+                        <span className="sr-only">Loading...</span>
+                      </Spinner> -->
+                <br>
+                <br>              
+            </div>
+            <!-- <ng-spinner size="20" type="border" color="warning"></ng-spinner> -->
+          
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,82 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+  <br>
+  <br>
+  <br>
+  <div ><img src="./assets/images/logo4.GIF" class="logo">
+  </div>
+  <br>
+  <br>
+
+  <p-steps [model]="items" [(activeIndex)]="activeIndex" ></p-steps>
+  <!-- <br> -->
+  <div>
+    <div class="details">
+      <div>
+        <br>
+        <p>שם המזמין</p>
+        <br>
+        <div>{{orderDetails[0].userName}}</div>
+        <br>
+        <p class="p1"> מייל</p>
+        <br>
+        <div>{{orderDetails[0].userMail}}</div>
+        <br>
+        <p class="p2">טלפון</p>
+        <br>
+        <div>{{orderDetails[0].userTelephone}}</div>
+        <br>
+      </div>
+      <br>
+      <div class="details1">
+        <br>
+        <p>סוג ההזמנה</p>
+        <br>
+        <br>
+         <img src="./assets/images/order.gif" class="order"> 
+      </div>    
+      <br>
+      <div class="details2">
+        <p>נוסח ההזמנה</p>
+        <br>
+        <div class="orderdetails">{{orderDetails[0].invitationDetails}}</div>
+      </div>    
+
+    </div>
+    <div class="tabl">
+      <table dir="rtl" mdbTable border="1">
+        <thead class="blue-gradient" class="info">
+          <tr>
+            <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr mdbTableCol *ngFor="let uc of tableUserContacts | async" class="info">
+            <td scope="row">{{uc.contactFirstTitle}}</td>
+            <td>{{uc.contactFirstName}}</td>
+            <td>{{uc.contactLastName}}</td>
+            <td>{{uc.contactSpouse}}</td>
+            <td>{{uc.contactLastTitle}}</td>
+            <td>{{uc.contactAddress}}</td>
+            <td>{{uc.contactCity}}</td>
+            <td>{{uc.contactTelephon}}</td>
+            <td>{{uc.contactDetails}}</td>
+            <td><input name="aaa" style="border: 0ch" type="text" [(ngModel)]="uc.contactMail" value="{{uc.contactMail}}"
+                (change)="changeMail(uc)"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      
+      <div class="btn1">
+        <!-- <input #file type="file" class="btn"  style="width: 300;" [readonly]="!adminPermission" pInputText  (change)="sentInvationEmails($event)"/>  -->
+        <!-- <input #file type="file" class="btn"  style="width: 300;"  pInputText  (change)="aaa($event)"/>  -->
+       
+                <button  style="width: 300;" class="btn" (click)="sentInvationEmails()">שליחת הזמנות</button>&nbsp;
+            <button style="width: 400;border: solid rgb(192, 150, 94) 3px ;" class="btnn"  (click)="craetFileWithOutMail()">יצירת קובץ אקסל לאנשי קשר ללא מייל</button>&nbsp;
+        <!-- <button class="btnbig"  (click)="craetFileWithOutMail()">יצירת קובץ אקסל לאנשי קשר ללא מייל</button>&nbsp; -->
+        <button style="width: 300;" class="btn"  (click)="saveMails()">שמירת השינויים בטבלה</button>
+      </div>
+  </div> 
+  </div>
+</div>

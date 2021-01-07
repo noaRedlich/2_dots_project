@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+<div class="background">
+        <br>
+        <br>
+        <br>
+        <div><img src="./assets/images/logo4.GIF" class="logo">
+        </div>
+        <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+    
+<div *ngIf="returnData" >
+    <div *ngFor="let uc of dict;let ii=index" class="abc">
+        <br> {{uc.user_Contact.contactFirstName}} {{uc.user_Contact.contactLastName}} {{uc.user_Contact.contactSpouse}} {{uc.user_Contact.contactAddress}}
+        {{uc.user_Contact.contactCity}} {{uc.user_Contact.contactTelephon}} {{uc.user_Contact.contactDetails}}
+        <br> האם התכונת ל:
+        <div dir="rtl" *ngFor="let c of uc.listContact;let i=index">
+            &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+            <!-- [label]="uc.user_Contact.user_contactId" -->
+            <p-radioButton (click)="checkboxChangging(c,uc.user_Contact)" [name]="ii" [value]="i"
+                ></p-radioButton>
+            {{c.contactFirstName}} {{c.contactLastName}} {{c.contactSpouse}} {{c.contactAddress}} {{c.contactCity}} {{c.contactTelephon}}
+            {{c.contactDetails}}
+            <br>
+        </div>
+    </div>
+    <br>
+    <button class="btn" (click)="save()" >שמירה</button>
+</div>
+</div>

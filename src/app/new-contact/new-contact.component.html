@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<div class="background">
+        <br><br>
+        <div><img src="./assets/images/logo4.GIF" class="logo">
+        </div>
+        <div>
+                <br>
+                <div *ngIf="display==2" >
+                        <br>
+                        <br>
+
+                        <p-steps [model]="items1" [(activeIndex)]="activeIndex1"></p-steps>
+                </div>
+                <div *ngIf="display==1">
+
+                        <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+                </div>
+                <br> <br> <br>
+                <div class="details">
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם פרטי" pInputText [(ngModel)]="contactFirstName">                                <i
+                                        class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם משפחה" pInputText [(ngModel)]="contactLastName">                                <i
+                                        class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="שם הבעל" pInputText [(ngModel)]="contactSpouse">                                <i
+                                        class="fa fa-fw fa-user" style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="כתובת" pInputText [(ngModel)]="contactAdress">                                <i
+                                        class="fa fa-fw fa-phone " style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="עיר" pInputText [(ngModel)]="contactCity">                                <i
+                                        class="fa fa-fw fa-phone " style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="טלפון" pInputText [(ngModel)]="contactTelephone">                                <i
+                                        class="fa fa-fw fa-phone " style="font-size: 1.5em"></i>
+                        </div>
+                        <br>
+                        <div style="text-align: center">
+                                <input type="password" size="30" placeholder="פרטים" pInputText [(ngModel)]="contactDetails">                                <i
+                                        class="fa fa-fw fa-star " style="font-size: 1.5em"></i>
+                        </div>
+                         <br>
+                        <div style="text-align: center">
+                                <input type="text" size="30" placeholder="מייל" pInputText [(ngModel)]="contactMail"> 
+                                <i class="fa fa-fw fa-envelope "
+                                        style="font-size: 1.5em"></i>
+                        </div>
+                       
+                      
+                        <br>
+                        <br>
+                        <div >
+                                <button class="btn" (click)="addContact()">הוסף</button>
+
+
+                        </div>
+                       
+                </div>
+
+        </div>
+</div>
+<router-outlet></router-outlet>
